@@ -2,6 +2,9 @@ import http from "http"
 
 const server = http.createServer((req, res) => {
     console.log(req)
+    if (req.url === "/course") {
+        res.end("Courses are here...")
+    }
     res.end("Server is running")
 
 })
